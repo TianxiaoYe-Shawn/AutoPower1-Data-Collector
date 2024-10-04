@@ -1,0 +1,33 @@
+<launch>
+  
+  <group> 
+  <!-- open image_view to see camera raw images-->
+  <node pkg="image_view" type="image_view" name="image_view_right_zed2i" output="screen">
+    <remap from="image" to="/right_zed2i/color/image_raw"/>
+  </node>
+  </group>
+
+  <group>
+  <!-- open ground truth publisher -->
+  <node name="data_collection_1" pkg="data_for_deepvio" type="data_collection_1.sh" />
+  <node name="model_state_stamper" output="screen" pkg="data_for_deepvio" type="model_state_stamper" />
+  </group>
+  
+  <group>
+  <!-- open data collection -->
+  <node name="data_collection_2" pkg="data_for_deepvio" type="data_collection_2.sh" />
+  </group>
+  
+  <group>
+  <!-- open acado tracking env -->
+  <node name="acado_env" pkg="data_for_deepvio" type="acado_env.sh" />
+  <include file="$(find acado_mpc)/launch/tracking_env.launch" />
+  </group>
+  
+  <group>
+  <!-- open acado tracking env -->
+  <include file="$(find acado_mpc)/launch/set_weight.launch" />
+  </group>
+  
+</launch>
+
