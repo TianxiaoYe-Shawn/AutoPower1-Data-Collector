@@ -1,10 +1,10 @@
 # Data-synchronization-and-collection
 This tutorial will teach you how to use ARClab's desktop-03 to collect data which for neural network training. Demo is here: 
 
-https://github.com/user-attachments/assets/00e59510-db1b-4c70-a5a7-fcdd3a50bfdc
+https://github.com/user-attachments/assets/4270b3dc-e587-4977-9493-03f1e7aaac27
 
 
-Created by [TianxiaoYe](https://github.com/fuwafuwaboom). If you have any questions, please contact via email: **tye46@wisc.edu**
+Created by [TianxiaoYe](https://github.com/TianxiaoYe-Shawn). If you have any questions, please contact via email: **tye46@wisc.edu**
 
 ## Open the JACKAL simulator with camera and city map
 
